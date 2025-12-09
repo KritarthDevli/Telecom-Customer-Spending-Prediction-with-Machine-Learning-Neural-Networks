@@ -1,44 +1,67 @@
-Telecom-Customer-Spending-Prediction-with-Machine-Learning-Neural-Networks
+📘 Credit Scoring Income Prediction using Decision Trees & Neural Networks
+This project predicts customer total income using a real-world credit scoring dataset. It demonstrates a complete machine learning workflow including data cleaning, preprocessing, feature engineering, classical ML, deep learning, and model comparison.
+The models used are Decision Tree Regression and a Keras Neural Network, with performance evaluated using the R² score.
 
-This project analyses telecom customer churn data and predicts **totalCharges** using both classical Machine Learning and Deep Learning models. It demonstrates a complete end-to-end AI workflow: data cleaning, preprocessing, encoding, scaling, model training, and performance comparison.
+📌 Project Objectives
 
-## 📌 Objectives
-- Load and explore a real telecom dataset  
-- Clean missing and inconsistent data  
-- Encode categorical variables  
-- Scale numerical features  
-- Train ML and DL regression models  
-- Compare model performance using MSE  
+Load and explore raw credit scoring data
+Clean duplicates and missing entries
+Encode categorical features
+Scale numerical variables
+Train a Decision Tree Regressor
+Train a Deep Neural Network (Keras Sequential)
+Visualize Actual vs Predicted income
+Compare the performance of both models
 
-## 📁 Dataset Overview
-The dataset includes:
-- Demographics (gender, seniorCitizen, dependents)  
-- Services used (internet, phone, contract type)  
-- Billing information (monthlyCharges, totalCharges)  
-- Churn-related information  
+📁 Dataset Overview
 
-Target variable: **totalCharges**
+The dataset credit_scoring_pre.csv includes:
+Feature	Description
+age	Customer age
+gender	Male/Female
+education	Education level
+family_status	Marital status
+children	Number of children
+income_type	Employment category
+total_income	Target variable
+purpose	Reason for loan
+purpose_short	Processed loan purpose
 
-## 🧠 Techniques Used
-- Pandas & NumPy  
-- One-hot encoding  
-- StandardScaler  
-- Linear Regression (Scikit-Learn)  
-- Deep Neural Network (Keras Sequential Model)  
-- Mean Squared Error (MSE) evaluation  
+The dataset has mixed numerical and categorical features, requiring preprocessing before modelling.
 
-## 🚀 Models Implemented
-### 1. Linear Regression  
-A classical ML regression model used as a baseline.
+🔧 Tech Stack
 
-### 2. Deep Learning Model  
-A neural network with:
-- Dense(64, ReLU)  
-- Dense(32, ReLU)  
-- Dense(1) output layer  
+Python
+Pandas / NumPy
+Scikit-Learn
+TensorFlow / Keras
+Matplotlib
+Jupyter Notebook
 
-Optimized using **Adam** and trained for 50 epochs.
+🧠 Machine Learning Models
+1️⃣ Decision Tree Regressor
 
-## 📊 Results
-Both models predict customer spending, with the deep learning model generally showing better MSE due to capturing nonlinear patterns in the dataset.
+A non-linear, tree-based model that handles complex relationships and does not require heavy scaling.
 
+2️⃣ Neural Network (Keras)
+
+A multi-layer perceptron model:
+
+Dense(64, ReLU)
+Dense(32, ReLU)
+Dense(1) output layer
+
+Optimized with Adam and trained using MSE as loss function.
+
+📊 Model Evaluation
+
+The models are evaluated using:
+
+R² Score
+Measures how well the model explains the variance in data
+Closer to 1 → better performance
+Negative → poor model fit
+Visualizations
+Scatter plots of:
+Actual vs Predicted (Decision Tree)
+Actual vs Predicted (Neural Network)
